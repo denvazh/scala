@@ -21,7 +21,8 @@ RUN \
   rm -rf scala-$SCALA_VERSION.tgz && \
   echo 'Installing sbt...' && \
   wget "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/$SBT_VERSION/sbt-launch.jar" -P /usr/local/bin/ && \
-  echo 'SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"' > /usr/local/bin/sbt && \
+  echo '#!/bin/bash' > /usr/local/bin/sbt && \
+  echo 'SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"' >> /usr/local/bin/sbt && \
   echo 'java $SBT_OPTS -jar `dirname $0`/sbt-launch.jar "$@"' >> /usr/local/bin/sbt && \
   chmod u+x /usr/local/bin/sbt && \
   echo 'Fetching all sbt related dependencies...' && \
