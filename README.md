@@ -8,7 +8,8 @@ This repository contains experimental **Dockerfile** of [Scala](http://www.scala
 
 ### Tags
 
-* `latest` (default): Scala 2.11.6 which is an alias to `2.11.6`
+* `latest` (default): Scala 2.11.7 which is an alias to `2.11.7`
+* `2.11.7`: Scala 2.11.7 (based on denvazh/java:openjdk8-jdk)
 * `2.11.6`: Scala 2.11.6
 * `2.11.5`: Scala 2.11.5
 * `2.11.4`: Scala 2.11.4
