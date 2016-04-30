@@ -10,7 +10,7 @@ MAINTAINER Denis Vazhenin <denis.vazhenin@me.com>
 
 # Versions
 ENV SCALA_VERSION 2.11.2
-ENV SBT_VERSION 0.13.8
+ENV SBT_VERSION 0.13.11
 
 # Install scala and sbt
 RUN \
@@ -20,7 +20,7 @@ RUN \
   mv /tmp/scala-$SCALA_VERSION/* /usr/local/ && \
   rm -rf scala-$SCALA_VERSION.tgz && \
   echo 'Installing sbt...' && \
-  wget "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/$SBT_VERSION/sbt-launch.jar" -P /usr/local/bin/ && \
+  wget "https://dl.bintray.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/$SBT_VERSION/sbt-launch.jar" -P /usr/local/bin/ && \
   echo '#!/bin/bash' > /usr/local/bin/sbt && \
   echo 'SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"' >> /usr/local/bin/sbt && \
   echo 'java $SBT_OPTS -jar `dirname $0`/sbt-launch.jar "$@"' >> /usr/local/bin/sbt && \

@@ -9,7 +9,7 @@ FROM denvazh/java:openjdk8-jdk
 MAINTAINER Denis Vazhenin <denis.vazhenin@me.com>
 
 # Versions
-ENV SCALA_VERSION 2.11.7
+ENV SCALA_VERSION 2.11.8
 ENV SBT_VERSION 0.13.11
 
 # Install scala and sbt
