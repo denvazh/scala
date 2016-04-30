@@ -1,6 +1,7 @@
 ## Scala
 
 This repository contains experimental **Dockerfile** of [Scala](http://www.scala-lang.org) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/denvazh/scala/) based on [lightweight docker image for OpenJDK](https://registry.hub.docker.com/u/denvazh/java/).
+Every image also comes bundled with latest version of [sbt](http://www.scala-sbt.org/0.13/docs/index.html), a build tool for Scala.
 
 ### Base Docker Image
 
@@ -9,7 +10,10 @@ This repository contains experimental **Dockerfile** of [Scala](http://www.scala
 
 ### Tags
 
-* `latest` (default): Scala 2.11.7 which is an alias to `2.11.7`
+* `latest` (default): Scala 2.11.8 which is an alias to `2.11.8`
+* `2.11.8`: Scala 2.11.8 (alias to `2.11.8-openjdk8`)
+* `2.11.8-openjdk8`: Scala 2.11.8 (based on denvazh/java:openjdk8-jdk)
+* `2.11.8-openjdk7`: Scala 2.11.8 (based on denvazh/java:openjdk7-jdk)
 * `2.11.7`: Scala 2.11.7 (alias to `2.11.7-openjdk8`)
 * `2.11.7-openjdk8`: Scala 2.11.7 (based on denvazh/java:openjdk8-jdk)
 * `2.11.7-openjdk7`: Scala 2.11.7 (based on denvazh/java:openjdk7-jdk)
